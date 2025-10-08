@@ -26,11 +26,18 @@ connectToDb();
 // --- CORS Configuration ---
 // This is the most important part for connecting your frontend and backend.
 // It explicitly allows your Vercel site to make requests to this server.
+// Backend/app.js
+
+// Find this line:
+app.use(cors());
+
+// And REPLACE it with this block:
 const corsOptions = {
-    origin: 'https://uber-one-eta.vercel.app', // Your Vercel frontend URL
-    credentials: true, // Allows cookies and authorization headers to be sent
-    optionsSuccessStatus: 200 // For compatibility with older browsers
+    origin: 'https://uber-indrjeetsinghsainis-projects.vercel.app', // Your Vercel URL
+    credentials: true,
+    optionsSuccessStatus: 200
 };
+app.use(cors(corsOptions));
 
 app.use(cors(corsOptions));
 
