@@ -4,8 +4,8 @@ import App from './App.jsx';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import UserContext from './context/UserContext.jsx';
-import CaptainContext from './context/CaptainContext.jsx'; // Corrected the typo
-import { SocketProvider } from './context/SocketContext.jsx'; // Added curly braces {}
+import CaptainContext from './context/CaptainContext.jsx';
+import { SocketProvider } from './context/SocketContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
